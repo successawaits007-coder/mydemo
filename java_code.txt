@@ -1,4 +1,4 @@
-class AREEB {
+class vehicle {
     int wheels;
 
     Vehicle(int wheels) {
