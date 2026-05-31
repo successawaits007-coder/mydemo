@@ -1,0 +1,84 @@
+class Vehicle {
+    int wheels;
+
+    Vehicle(int wheels) {
+        this.wheels = wheels;
+    }
+
+    void displayVehicle() {
+        System.out.println("Number of Wheels: " + wheels);
+    }
+}
+
+class Car extends Vehicle {
+    String engineNo, chassisNo, manufacturer;
+
+    Car(int wheels, String engineNo, String chassisNo, String manufacturer) {
+        super(wheels);
+        this.engineNo = engineNo;
+        this.chassisNo = chassisNo;
+        this.manufacturer = manufacturer;
+    }
+
+    void displayCar() {
+        displayVehicle();
+        System.out.println("Engine No: " + engineNo);
+        System.out.println("Chassis No: " + chassisNo);
+        System.out.println("Manufacturer: " + manufacturer);
+    }
+}
+
+class Bike extends Vehicle {
+    String engineNo, chassisNo, manufacturer;
+
+    Bike(int wheels, String engineNo, String chassisNo, String manufacturer) {
+        super(wheels);
+        this.engineNo = engineNo;
+        this.chassisNo = chassisNo;
+        this.manufacturer = manufacturer;
+    }
+
+    void displayBike() {
+        displayVehicle();
+        System.out.println("Engine No: " + engineNo);
+        System.out.println("Chassis No: " + chassisNo);
+        System.out.println("Manufacturer: " + manufacturer);
+    }
+}
+
+class Truck extends Vehicle {
+    String engineNo, chassisNo, manufacturer;
+
+    Truck(int wheels, String engineNo, String chassisNo, String manufacturer) {
+        super(wheels);
+        this.engineNo = engineNo;
+        this.chassisNo = chassisNo;
+        this.manufacturer = manufacturer;
+    }
+    void displayTruck() {
+        displayVehicle();
+        System.out.println("Engine No: " + engineNo);
+        System.out.println("Chassis No: " + chassisNo);
+        System.out.println("Manufacturer: " + manufacturer);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car c = new Car(4, "ENG123", "CH123", "Toyota");
+        Bike b = new Bike(2, "ENG456", "CH456", "Honda");
+        Truck t = new Truck(6, "ENG789", "CH789", "Tata");
+
+        System.out.println("CAR DETAILS");
+        c.displayCar();
+
+        System.out.println("\nBIKE DETAILS");
+        b.displayBike();
+
+        System.out.println("\nTRUCK DETAILS");
+        t.displayTruck();
+    }
+}
+
+Manufacturer: Tata
